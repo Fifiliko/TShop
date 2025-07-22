@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TShop.Application\TShop.Application.csproj" />
+    <ProjectReference Include="..\TShop.Domain\TShop.Domain.csproj" />
+    <ProjectReference Include="..\TShop.Infrustructure\TShop.Infrustructure.csproj" />
+  </ItemGroup>
+
+</Project>
