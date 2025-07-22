@@ -19,4 +19,8 @@
     <ProjectReference Include="..\TShop.Infrustructure\TShop.Infrustructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Customer\Controllers\" />
+  </ItemGroup>
+
 </Project>
