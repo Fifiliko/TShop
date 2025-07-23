@@ -19,22 +19,6 @@ builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 
 
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Information()  // নিজের লোগগুলোর জন্য
-    .MinimumLevel.Override("Microsoft", LogEventLevel.Fatal) // Microsoft এর সব কম গুরুত্বপূর্ণ লগ বন্ধ
-    .MinimumLevel.Override("System", LogEventLevel.Fatal)    // System এর সব কম গুরুত্বপূর্ণ লগ বন্ধ
-    .WriteTo.File("Logs/log-.txt",
-        rollingInterval: RollingInterval.Day,
-        outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss}] {Message:lj}{NewLine}"
-    )
-    .CreateLogger();
-
-builder.Host.UseSerilog();
-
-
-
-builder.Host.UseSerilog();
-
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
