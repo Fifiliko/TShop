@@ -124,14 +124,12 @@ namespace TShop.Web.Areas.Admin.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             _logger.LogInformation("BrandController - DeleteConfirmed POST called with ID: {Id}", id);
-
             var deleted = await _brandService.DeleteAsync(id);
             if (!deleted)
             {
                 _logger.LogWarning("Failed to delete Brand with ID: {Id}", id);
                 return NotFound();
             }
-
             _logger.LogInformation("Brand deleted successfully with ID: {Id}", id);
             return RedirectToAction(nameof(Index));
         }
