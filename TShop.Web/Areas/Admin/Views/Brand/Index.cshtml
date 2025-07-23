@@ -1,0 +1,56 @@
+@model List<TShop.Web.ViewModels.BrandVM>
+<div class="max-w-4xl mx-auto p-6">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold text-gray-800">Brand List</h2>
+        <a asp-action="Create" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+            + Add Brand
+        </a>
+    </div>
+    <div class="overflow-x-auto bg-white rounded-xl shadow">
+        <table class="min-w-full table-auto text-sm text-left text-gray-700">
+            <thead class="bg-gray-100 text-gray-600 uppercase">
+                <tr>
+                    <th class="px-6 py-3">ID</th>
+                    <th class="px-6 py-3">Name</th>
+                    <th class="px-6 py-3 text-right">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                @foreach (var brand in Model)
+                {
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-6 py-4">@brand.Id</td>
+                        <td class="px-6 py-4">@brand.Name</td>
+                        <td class="px-6 py-4 text-right">
+                            <a asp-action="Details" asp-route-id="@brand.Id" class="text-blue-600 hover:underline">Details</a>
+                            |
+                            <a asp-action="Edit" asp-route-id="@brand.Id" class="text-blue-600 hover:underline">Edit</a>
+                            |
+                            <a asp-action="Delete" asp-route-id="@brand.Id" class="text-red-600 hover:underline">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        @if (TempData["success"] != null)
+        {
+            <text>toastr.success('@TempData["success"]');</text>
+        }
+        @if (TempData["error"] != null)
+        {
+            <text>toastr.error('@TempData["error"]');</text>
+        }
+        @if (TempData["warning"] != null)
+        {
+            <text>toastr.warning('@TempData["warning"]');</text>
+        }
+        @if (TempData["info"] != null)
+        {
+            <text>toastr.info('@TempData["info"]');</text>
+        }
+    </script>
+}
