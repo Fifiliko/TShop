@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 namespace TShop.Web.ViewModels
 {
     public class BrandVM
@@ -11,3 +11,4 @@ namespace TShop.Web.ViewModels
         public string Name { get; set; }
     }
 }
+

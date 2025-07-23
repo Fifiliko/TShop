@@ -1,3 +1,4 @@
+
 using Microsoft.EntityFrameworkCore;
 using TShop.Application.Interfaces.Repositories;
 using TShop.Application.Interfaces.Sevices;
@@ -5,6 +6,7 @@ using TShop.Application.Mapping;
 using TShop.Application.Services;
 using TShop.Infrustructure.Data;
 using TShop.Infrustructure.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,22 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()  // নিজের লোগগুলোর জন্য
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Fatal) // Microsoft এর সব কম গুরুত্বপূর্ণ লগ বন্ধ
+    .MinimumLevel.Override("System", LogEventLevel.Fatal)    // System এর সব কম গুরুত্বপূর্ণ লগ বন্ধ
+    .WriteTo.File("Logs/log-.txt",
+        rollingInterval: RollingInterval.Day,
+        outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss}] {Message:lj}{NewLine}"
+    )
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
+
+
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
@@ -38,8 +56,10 @@ app.MapControllerRoute(
     );
 app.MapControllerRoute(
     name: "default",
+
     pattern: "{controller=Brand}/{action=Index}/{id?}",
     defaults: new { area = "Admin" });
 app.Run();
+
 
 app.Run();

@@ -1,7 +1,8 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using TShop.Application.DTOs;
 using TShop.Application.Interfaces.Sevices;
+
 using TShop.Web.ViewModels;
 
 namespace TShop.Web.Areas.Admin.Controllers
@@ -9,6 +10,7 @@ namespace TShop.Web.Areas.Admin.Controllers
     [Area("Admin")]
     public class BrandController : Controller
     {
+
         private readonly IBrandService _brandService;
         private readonly IMapper _mapper;
 
