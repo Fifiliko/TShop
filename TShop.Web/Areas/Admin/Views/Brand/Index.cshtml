@@ -34,3 +34,23 @@
         </table>
     </div>
 </div>
+@section Scripts {
+    <script>
+        @if (TempData["success"] != null)
+        {
+            <text>toastr.success('@TempData["success"]');</text>
+        }
+        @if (TempData["error"] != null)
+        {
+            <text>toastr.error('@TempData["error"]');</text>
+        }
+        @if (TempData["warning"] != null)
+        {
+            <text>toastr.warning('@TempData["warning"]');</text>
+        }
+        @if (TempData["info"] != null)
+        {
+            <text>toastr.info('@TempData["info"]');</text>
+        }
+    </script>
+}
