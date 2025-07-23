@@ -10,6 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="FluentAssertions" Version="8.5.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
@@ -26,6 +28,18 @@
     <Folder Include="ApplicationsTests\" />
     <Folder Include="DomainTests\" />
     <Folder Include="ServicesTests\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TShop.Application\TShop.Application.csproj" />
+    <ProjectReference Include="..\TShop.Domain\TShop.Domain.csproj" />
+    <ProjectReference Include="..\TShop.Infrustructure\TShop.Infrustructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <ProjectReference Include="..\TShop.Application\TShop.Application.csproj" />
+	  <ProjectReference Include="..\TShop.Domain\TShop.Domain.csproj" />
+	  <ProjectReference Include="..\TShop.Web\TShop.Web.csproj" />
   </ItemGroup>
 
 </Project>
