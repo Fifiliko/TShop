@@ -1,4 +1,5 @@
-﻿namespace TShop.Web.ViewModels
+﻿using System.ComponentModel.DataAnnotations;
+namespace TShop.Web.ViewModels
 {
     public class BrandVM
     {
