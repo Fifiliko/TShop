@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TShop.Web", "TShop.Web\TShop.Web.csproj", "{2C318EE4-84AD-4163-B7B3-E1DD82016144}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TShop.Infrustructure", "TShop.Infrustructure\TShop.Infrustructure.csproj", "{5DD3D641-29EB-4B6A-BB49-E1DFFFEFA0AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TShop.Domain", "TShop.Domain\TShop.Domain.csproj", "{FBB6EE51-9E5E-4562-9604-50557397D952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TShop.Tests", "TShop.Tests\TShop.Tests.csproj", "{43645B69-1F32-4EF3-9DC1-088FA96CFFCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FBB6EE51-9E5E-4562-9604-50557397D952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB6EE51-9E5E-4562-9604-50557397D952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB6EE51-9E5E-4562-9604-50557397D952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43645B69-1F32-4EF3-9DC1-088FA96CFFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43645B69-1F32-4EF3-9DC1-088FA96CFFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43645B69-1F32-4EF3-9DC1-088FA96CFFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43645B69-1F32-4EF3-9DC1-088FA96CFFCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
