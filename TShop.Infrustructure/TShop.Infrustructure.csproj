@@ -20,8 +20,4 @@
     <ProjectReference Include="..\TShop.Domain\TShop.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-  </ItemGroup>
-
 </Project>
